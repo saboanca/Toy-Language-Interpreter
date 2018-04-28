@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="547.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUIController">
+   <children>
+      <VBox prefHeight="218.0" prefWidth="431.0">
+         <children>
+            <Button fx:id="button1" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="39.0" prefWidth="75.0" text="Run" />
+            <ListView fx:id="listView" editable="true" maxHeight="-Infinity" prefHeight="441.0" prefWidth="508.0" />
+            <Label fx:id="label" prefHeight="65.0" prefWidth="508.0" />
+         </children>
+      </VBox>
+   </children>
+</StackPane>

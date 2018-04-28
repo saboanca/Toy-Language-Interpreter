@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<StackPane prefHeight="665.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerExecution">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="665.0" prefWidth="297.0" StackPane.alignment="TOP_LEFT">
+         <children>
+            <Label fx:id="label1" prefHeight="64.0" prefWidth="219.0" text="Label" />
+            <Button fx:id="runButton" mnemonicParsing="false" onAction="#handleRunButton" prefHeight="7.0" prefWidth="61.0" text="Run" />
+            <Label fx:id="labelNbPrgStates" text="NbPrgStates" />
+            <TextField fx:id="nbStatesTextField" maxWidth="-Infinity" prefHeight="39.0" prefWidth="132.0" />
+            <Label fx:id="labelOut" prefHeight="27.0" prefWidth="35.0" text="Out" />
+            <ListView fx:id="outListView" editable="true" maxWidth="-Infinity" prefHeight="121.0" prefWidth="132.0" />
+            <Label fx:id="labelIdList" prefHeight="27.0" prefWidth="57.0" text="IdList" />
+            <ListView fx:id="idListView" editable="true" maxWidth="-Infinity" onMouseClicked="#handleIdStack" prefHeight="72.0" prefWidth="131.0" />
+         </children></VBox>
+      <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="484.0" prefWidth="269.0" StackPane.alignment="CENTER">
+         <children>
+            <Label fx:id="labelHeap" prefHeight="27.0" prefWidth="50.0" text="Heap" />
+            <TableView fx:id="heapTableView" editable="true" maxWidth="-Infinity" prefHeight="159.0" prefWidth="174.0">
+              <columns>
+                <TableColumn fx:id="heapAddress" prefWidth="81.0" text="address" />
+                <TableColumn fx:id="heapValue" prefWidth="93.0" text="value" />
+              </columns>
+            </TableView>
+            <Label fx:id="fileTableLabel" prefHeight="27.0" prefWidth="78.0" text="FileTable" />
+            <TableView fx:id="fileTableView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="170.0" prefWidth="191.0">
+              <columns>
+                <TableColumn fx:id="fileTableId" prefWidth="75.0" text="id" />
+                <TableColumn fx:id="fileTableFilename" prefWidth="115.0" text="filename" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="723.0" prefWidth="228.0" StackPane.alignment="TOP_RIGHT">
+         <children>
+            <Label prefHeight="27.0" prefWidth="52.0" text="Stack" />
+            <ListView fx:id="stackListView" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="153.0" prefWidth="332.0" />
+            <Label prefHeight="27.0" prefWidth="81.0" text="SymTbl" />
+            <TableView fx:id="symTableView" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="148.0" prefWidth="245.0">
+              <columns>
+                <TableColumn fx:id="idSymTbl" prefWidth="122.0" text="id" />
+                <TableColumn fx:id="valSymTbl" prefWidth="122.0" text="val" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
